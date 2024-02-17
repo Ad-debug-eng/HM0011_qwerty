@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+* {
+  margin: 0;
+}
+:root {
+  --main-blue: #1E213F;
+  --main-pink: #f87070;
+  --second-blue: #161932;
+  --font-set1: 'Kumbh Sans', Poppins, Monserat, 'Open Sans', Roboto, sans-serif;
+  --font-set2: 'Roboto Slab', Lora, Merriweather, 'PT Serif', Arvo, 'Playfair Display', 'Noto serif';
+  --font-set3: "Space Mono", "IBM Plex Mono", "Fira Mono", "Anonymous Pro", monospace;
+}
+body  {
+  text-align: center;
+  background-color: var(--main-blue);
+  user-select: none;
+}
+
+/*
+                    HEADER
+                                                            */
+.pomodoro-logo  {
+  padding: 30px;
+}
+
+/*
+                    BREAK MODES
+                                                            */
+.break-modes  {
+  background-color: var(--second-blue);
+  width: 330px;
+  height: 62px;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 31px;
+}
+input[type="radio"] {
+  display: none;
+}
+.pill, .pill label span {
+  height: 52px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 26px;
+}
+.pill{
+  background-color: var(--second-blue);
+}
+.pill label span{
+  font-size: 15px;
+  color: #6c6e86;
+  font-weight: 700;
+}
+.break-mode-btn:checked + span {
+  color: var(--second-blue);
+  border-radius: 26px;
+}
+
+/*
+                    TIMER
+                                                            */
+.timer {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+}
+.start-stop:hover {
+  cursor: pointer;
+  fill: #4A90E2;
+  transition: fill 0.3s ease;
+}
+.progress-ring{
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/*
+                    SETTINGS
+                                                            */
+.settings-button  {
+  font-size: 50px;
+  margin-left: 48%;
+  margin-top: 30%;
+}
+.settings-button img:hover  {
+  cursor: pointer;
+  transform: scale(1.08);
+  transition: transform 0.3s ease;
+}
+.settings-section {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.settings-menu  {
+  width: 1060px;
+  height: 490px;
+  background: #fff;
+  border-radius: 22px;
+  margin: auto;
+  position: relative;
+  top: -335px;
+}
+.settings-header  {
+  padding: 0px 50px;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-set1);
+  font-size: 1.2rem;
+  color: var(--main-blue);
+  border-bottom: 1px solid #D7E0FF;
+}
+.close-button:hover {
+  cursor: pointer;
+}
+.close-button:hover svg path  {
+  opacity: 1;
+}
+form {
+  height: 93%;
+  width: 85%;
+  margin: auto;
+}
+form h2 {
+  font-family: var(--font-set1);
+  font-size: 0.85rem;
+  letter-spacing: 0.3rem;
+  color: var(--main-blue);
+  height: 10%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.custom-time, .custom-font, .custom-color {
+  height: 23%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.custom-font > label, .custom-color > label {
+  font-family: var(--font-set1);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  color: var(--main-blue);
+}
+.custom-time, .custom-font  {
+  border-bottom: 1px solid #D7E0FF;
+}
+.custom-time  {
+  font-family: var(--font-set1);
+  color: var(--main-blue);
+  text-align: left;
+}
+.custom-time div label  {
+  font-size: 0.9rem;
+  opacity: 0.4;
+  font-weight: 700;
+}
+input[type="number"]  {
+  width: 80%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: buttonface;
+  font-family: var(--font-set1);
+  color: var(--main-blue);
+  font-weight: 700;
+  border: none;
+  padding: 10%;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+.radios  {
+  width: 35%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.radios div, .radios div label {
+  cursor: pointer;
+}
+.kumbh-sans, .roboto-slab, .space-mono, .red, .blue, .purple   {
+  height: 24px;
+  width: 24px;
+  border-radius: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkmark-icon {
+  width: 30px;
+  height: 30px;
+  padding-top: 10px;
+  fill: var(--main-blue);
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  transition: opacity 0.2s ease-in-out;
+}
+button  {
+  height: 36px;
+  width: 140px;
+  border: none;
+  background: var(--main-pink);
+  font-family: var(--font-set1);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 27px;
+}
+button:hover, button:active{
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+
+/*
+                    MEDIA QUERIES
+                                                            */
+/*Mobile*/
+@media (max-width: 414px) and (min-width: 360px) {
+  /*BREAK MODES*/
+  .break-modes{
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+  }
+  .pill, .pill label span{
+    width: 93px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+  }
+  /*TIMER*/
+  .timer, .timer-circle{
+    width: 380px;
+    height: 380px;
+  }
+  .timer-text{
+    font-size: 65px;
+  }
+  .start-stop{
+    font-size: 14px;
+  }
+  /*SETTINGS*/
+  .settings-menu{
+    width: 350px;
+    height: 650px;
+    top: -525px;
+  }
+  .settings-header{
+    height: 12%;
+    padding: 0 30px;
+    font-size: 0.9rem;
+  }
+  form{
+    height: 109%;
+  }
+  form h2{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    height: 5%;
+  }
+  .custom-font, .custom-color{
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 21%;
+  }
+  .custom-time{
+    height: 26%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .custom-time div{
+    display: flex;
+    flex-direction: row;
+  }
+  .custom-time div label{
+    display: flex;
+    align-items: center;
+  }
+  .custom-time div label, input[type='number']{
+    width: 50%;
+  }
+  .radios{
+    width: 70%;
+  }
+  button{
+    margin-top: 4%;
+  }
+}
+
+/*
+                    SCROLLBAR
+                                                            */
+:-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--main-blue);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #D7E0FF;
+  border-radius: 10px;
+}
