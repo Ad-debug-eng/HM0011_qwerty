@@ -6,27 +6,27 @@ import {
   listRemove,
 } from "../../store/slice/todoListSlice";
 import Message from "../Message";
-import "./styles.scss";
+import "./styles.css";
 import { RootState, useAppDispatch, useAppSelector } from "../../store/store";
 
 const TodoList = () => {
   const dispatch = useAppDispatch();
-  const [list, setList] = useState<string>("");
+  const [list, setList] = useState("");
 
-  const data = useAppSelector((state: RootState) => state.todoList);
+  const data = useAppSelector((state) => state.todoList);
   const { todoList, repeat } = data;
 
-  const submitHandler = (e: any) => {
+  const submitHandler = (e) => {
     e.preventDefault();
     dispatch(listAdd({ name: list, complete: false }));
     setList("");
   };
 
-  const handleDelete = (item: any) => {
+  const handleDelete = (item) => {
     dispatch(listRemove(item));
   };
 
-  const handleToggleComplete = (item: any) => {
+  const handleToggleComplete = (item) => {
     dispatch(listToggleComplete(item));
   };
 
@@ -44,7 +44,7 @@ const TodoList = () => {
                 required
               />
             </Col>
-            <Col xs={3} sm={4}>
+            <Col xs={3} sm={4} className='d-flex align-items-end'>
               <Button type='submit'>Add</Button>
             </Col>
           </Row>
@@ -56,36 +56,34 @@ const TodoList = () => {
             <Message variant='danger'>This note is already added</Message>
           )}
           <ListGroup className='todolistList'>
-            {todoList.map((listItem: any) => (
+            {todoList.map((listItem) => (
               <ListGroup.Item
                 variant={listItem.complete ? "success" : "primary"}
                 key={listItem.name}
+                className='d-flex justify-content-between align-items-inline'
               >
-                <Row>
-                  <Col xs={8} sm={8}>
-                    - {listItem.name}
-                  </Col>
-                  <Col xs={2} sm={2}>
-                    <Button
-                      variant={listItem.complete ? "success" : "danger"} // Update variant
-                      onClick={() => handleToggleComplete(listItem.name)}
-                    >
-                      {listItem.complete ? (
-                        <i className='fas fa-check'></i>
-                      ) : (
-                        <i className='fas fa-eraser'></i>
-                      )}
-                    </Button>
-                  </Col>
-                  <Col xs={2} sm={2}>
-                    <Button
-                      variant='dark'
-                      onClick={() => handleDelete(listItem.name)}
-                    >
-                      <i className='fas fa-trash'></i>
-                    </Button>
-                  </Col>
-                </Row>
+                <span>- {listItem.name}</span>
+                <div>
+                  <Button
+                    size="sm"
+                    variant={listItem.complete ? "success" : "danger"}
+                    className='me-1'
+                    onClick={() => handleToggleComplete(listItem.name)}
+                  >
+                    {listItem.complete ? (
+                      <i className='fas fa-check'></i>
+                    ) : (
+                      <i className='fas fa-eraser'></i>
+                    )}
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant='dark'
+                    onClick={() => handleDelete(listItem.name)}
+                  >
+                    <i className='fas fa-trash'></i>
+                  </Button>
+                </div>
               </ListGroup.Item>
             ))}
           </ListGroup>

@@ -1,17 +1,16 @@
-import{ useState } from "react";
-
-import "./styles.scss";
+import React, { useState } from "react";
+import "./styles.css";
 import ModifierBoard from "../../components/ModifierBoard";
 import RainToggleButton from "../../components/RainToggleButton";
-
 import Footer from "../../layout/Footer";
 import { useTimer } from "react-timer-hook";
-import { RootState, useAppSelector } from "../../store/store";
+import { useAppSelector } from "../../store/store";
+
 const Home = () => {
   const [timerStart, setTimerStart] = useState(false);
 
-  const daynight = useAppSelector((state: RootState) => state.mode);
-  const rain = useAppSelector((state: RootState) => state.rain);
+  const daynight = useAppSelector((state) => state.mode);
+  const rain = useAppSelector((state) => state.rain);
 
   const { mode } = daynight;
   const { rainMode } = rain;
@@ -27,7 +26,7 @@ const Home = () => {
       onExpire: () => setTimerStart(false),
     });
 
-  const setTimerHandler = (hour: number, minute: number, second: number) => {
+  const setTimerHandler = (hour, minute, second) => {
     const time = new Date();
     const setupTimer =
       Number(hour) * 3600 + Number(second) + Number(minute) * 60;
@@ -72,7 +71,7 @@ const Home = () => {
       >
         <source src='/assets/video/v3.mp4' type='video/mp4' />
       </video>
-      <RainToggleButton />
+      {/* <RainToggleButton /> */}
       <ModifierBoard
         seconds={seconds}
         minutes={minutes}
