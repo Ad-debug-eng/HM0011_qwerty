@@ -13,9 +13,8 @@ function App() {
           path='/'
           element={
             <>
-              {/* <Header /> <Home /> */}
-              <YoutubePlayer apiKey={"AIzaSyA-dDgWF8zewr_ERPzQFaErWGjTyJtlIuo"} />
-              {/* <PomodoroApp/> */}
+              <Header /> <Home />
+              {/* <YoutubePlayer apiKey={"AIzaSyA-dDgWF8zewr_ERPzQFaErWGjTyJtlIuo"} /> */}
               
             </>
           }

@@ -2,7 +2,7 @@ import{ useState } from "react";
 
 import "./styles.scss";
 import ModifierBoard from "../../components/ModifierBoard";
-import RainToggleButton from "../../components/RainToggleButton";
+// import RainToggleButton from "../../components/RainToggleButton";
 
 import Footer from "../../layout/Footer";
 import { useTimer } from "react-timer-hook";
@@ -72,7 +72,7 @@ const Home = () => {
       >
         <source src='/assets/video/v3.mp4' type='video/mp4' />
       </video>
-      <RainToggleButton />
+      {/* <RainToggleButton /> */}
       <ModifierBoard
         seconds={seconds}
         minutes={minutes}
