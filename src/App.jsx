@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Header from "./layout/Header";
+import YoutubePlayer from "./components/test";
 // import PomodoroApp from "./components/pomo/PomodoroApp";
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
           path='/'
           element={
             <>
-              <Header /> <Home />
+              {/* <Header /> <Home /> */}
+              <YoutubePlayer apiKey={"AIzaSyA-dDgWF8zewr_ERPzQFaErWGjTyJtlIuo"} />
               {/* <PomodoroApp/> */}
               
             </>
