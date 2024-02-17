@@ -1,0 +1,58 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  height: 15%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 26px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.footer .song-name {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.footer .song-name span {
+  color: white;
+}
+
+.footer .controller {
+  display: flex;
+  align-items: center;
+  font-size: 20px; /* Adjust the font size as needed */
+}
+
+
+.footer .author {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.footer .author .author-name {
+  margin-left: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer .author .author-name:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .footer .author {
+    display: none;
+  }
+}
