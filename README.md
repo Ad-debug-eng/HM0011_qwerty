@@ -20,6 +20,7 @@ The project aims to tackle the challenge of maintaining student focus and enhanc
 <img width="960" alt="Screenshot 2024-02-18 103657" src="https://github.com/meeheer123/HM0011_qwerty/assets/125662965/78e48050-d9f0-46b4-ad4e-403bc08af0fb">
 <img width="960" alt="Screenshot 2024-02-18 103715" src="https://github.com/meeheer123/HM0011_qwerty/assets/125662965/ac87a4a5-b42f-4983-b3c4-77a9a749a529">
 <img width="960" alt="Screenshot 2024-02-18 103727" src="https://github.com/meeheer123/HM0011_qwerty/assets/125662965/d1420021-60b5-4275-b830-a1d4b87225a3">
+<img width="960" alt="Screenshot 2024-02-18 103727" src="https://github.com/meeheer123/HM0011_qwerty/assets/125662965/d1420021-60b5-4275-b830-a1d4b87225a3">
 
 ## Deployed Url
 [Study Vibes](https://hm-0011-qwerty.vercel.app/)
