@@ -126,9 +126,9 @@ function PomodoroApp() {
 	function progress(timeInSeconds) {
 		const durationInSeconds = timerType * 60;
 		const percentage = circumference * (1 - timeInSeconds / durationInSeconds);
-		const offset = circumference - percentage;
+		const offset = circumference - (0.5*percentage);
 		setProgressRingStyle({
-			strokeDasharray: `${circumference} ${circumference}`,
+			strokeDasharray: `${circumference}`,
 			strokeDashoffset: `${offset}`,
 			stroke: themeStyle.color,
 		});
