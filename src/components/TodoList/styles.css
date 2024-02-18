@@ -1,10 +1,10 @@
 .todoList {
-  height: 200px;
+  height: 50px;
   /* overflow-y: scroll; */
 }
 
 .todolistList {
-  height: 150px;
+  height: 400px;
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
