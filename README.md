@@ -3,7 +3,7 @@
 ## Design a solution to improve the focus of students and enhance attention span while studying.
 
 ## Description
-Brief description of your project.
+The project aims to tackle the challenge of maintaining student focus and enhancing attention spans during study sessions. By leveraging interactive methods and creative approaches, the solution seeks to enhance the overall learning experience, fostering continuous concentration among students. The goal is to create an educational environment that not only facilitates effective learning but also promotes long-term retention of knowledge.
 
 ## Features
 - Soothing Music with Adjustable Lofi Beats
