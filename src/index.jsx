@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./index.css";
 // import "./index.scss";
 import './pomo.css';
@@ -7,9 +7,8 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
-const root: ReactDOM.Root = ReactDOM.createRoot(
-  document.getElementById("root")!
+const root = ReactDOM.createRoot(
+  document.getElementById("root")
 );
 
 root.render(
