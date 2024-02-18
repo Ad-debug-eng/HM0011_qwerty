@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import ModifierBoard from "../../components/ModifierBoard";
-import RainToggleButton from "../../components/RainToggleButton";
+// import RainToggleButton from "../../components/RainToggleButton";
 import Footer from "../../layout/Footer";
 import { useTimer } from "react-timer-hook";
 import { useAppSelector } from "../../store/store";
