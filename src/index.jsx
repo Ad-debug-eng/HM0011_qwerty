@@ -1,5 +1,6 @@
 import ReactDOM from "react-dom";
 import "./index.css";
+import React from "react";
 // import "./index.scss";
 import './pomo.css';
 import App from "./App";
